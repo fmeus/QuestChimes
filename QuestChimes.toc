@@ -4,6 +4,5 @@
 ## Author: fmeus
 ## Notes: Provides audible notifications when a quest or quest objective is completed
 ## DefaultState: enabled
-## Revision: $Id: QuestChimes.toc 1095 2013-05-22 07:15:19Z fmeus_lgs $
 
 QuestChimes.lua
