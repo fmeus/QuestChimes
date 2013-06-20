@@ -1,7 +1,3 @@
---[[ =================================================================
-    Revision:
-    ================================================================= --]]
-
 -- Track quest changes
     local function QuestChimes_OnEvent( self, event, ... )
         -- Get the quest that was updated
