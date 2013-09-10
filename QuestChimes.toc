@@ -1,6 +1,6 @@
-## Interface: 50300
+## Interface: 50400
 ## Title: QuestChimes
-## Version: 2.3
+## Version: 2.4
 ## Author: fmeus
 ## Notes: Provides audible notifications when a quest or quest objective is completed
 ## DefaultState: enabled
