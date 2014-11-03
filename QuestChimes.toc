@@ -1,8 +1,9 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: QuestChimes
-## Version: 2.4
+## Version: 2.5
 ## Author: fmeus
 ## Notes: Provides audible notifications when a quest or quest objective is completed
 ## DefaultState: enabled
+## SavedVariables: QC_SETTINGS
 
 QuestChimes.lua

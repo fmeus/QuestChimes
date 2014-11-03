@@ -1,5 +1,15 @@
 -- Track quest changes
     local function QuestChimes_OnEvent( self, event, ... )
+        -- Load data from previous session
+        local arg1 = ...;
+        if ( event == "ADDON_LOADED" and arg1 == "QuestChimes" ) then
+            if ( QC_SETTINGS == nil ) then
+                QC_SETTINGS = {};
+                QC_SETTINGS["COMPLETION_SOUND"] = "QUESTCOMPLETED"; -- RaidWarning
+                QC_SETTINGS["PROGRESSION_SOUND"] = "AuctionWindowOpen";
+            end;
+        end;
+
         -- Get the quest that was updated
         if ( event == "QUEST_WATCH_UPDATE" ) then
             QuestIndex = ...;
@@ -14,9 +24,9 @@
                     completed = completed + ( finished or 0 );
                 end;
                 if ( completed == GetNumQuestLeaderBoards( QuestIndex ) ) then
-                    PlaySound( "QUESTCOMPLETED" );
+                    PlaySound( QC_SETTINGS["COMPLETION_SOUND"] );
                 else
-                    PlaySound( "AuctionWindowOpen" );
+                    PlaySound( QC_SETTINGS["PROGRESSION_SOUND"] );
                 end;
             end;
             QuestIndex = nil;
@@ -26,6 +36,7 @@
 -- Initial setup
     local QuestIndex;
     local QuestChimes = CreateFrame( "Frame", "QuestChimes", UIParent );
+    QuestChimes:RegisterEvent( "ADDON_LOADED" );
     QuestChimes:RegisterEvent( "QUEST_WATCH_UPDATE" );
     QuestChimes:RegisterEvent( "UNIT_QUEST_LOG_CHANGED" );
     QuestChimes:RegisterEvent( "QUEST_LOG_UPDATE" );
