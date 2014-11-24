@@ -21,7 +21,7 @@
                 local text, type, finished, completed = nil, nil, nil, 0;
                 for objective = 1, GetNumQuestLeaderBoards( QuestIndex ) do
                     text, type, finished = GetQuestLogLeaderBoard( objective, QuestIndex );
-                    completed = completed + ( finished or 0 );
+                    completed = completed + ( finished and 1 or 0 );
                 end;
                 if ( completed == GetNumQuestLeaderBoards( QuestIndex ) ) then
                     PlaySound( QC_SETTINGS["COMPLETION_SOUND"] );
