@@ -1,5 +1,5 @@
 Version 2.5
-- Changed: Updated for 6.0.2
+- Changed: Updated for 6.0.3
 - Added options for warning sounds
 
 Version 2.4 - September 11, 2013
