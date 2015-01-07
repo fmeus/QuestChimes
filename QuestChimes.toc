@@ -1,6 +1,6 @@
 ## Interface: 60000
 ## Title: QuestChimes
-## Version: 2.5
+## Version: 2.6
 ## Author: fmeus
 ## Notes: Provides audible notifications when a quest or quest objective is completed
 ## DefaultState: enabled
