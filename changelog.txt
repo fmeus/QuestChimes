@@ -1,5 +1,5 @@
 Version 2.7
-- Changed: Updated for 6.1
+- Changed: Updated for 6.2
 
 Version 2.6
 - Fix for arithmetic on boolean value
